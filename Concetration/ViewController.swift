@@ -9,7 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var flipCount: Int = 0
+    var flipCount: Int = 0 {
+        didSet{
+            flipCountLabel.text = "Flips: \(flipCount)"
+        }
+    }
 
     @IBAction func touchedCard(_ sender: UIButton) {
         flipCard(withEmoji: "🙈", on: sender)
@@ -30,7 +34,6 @@ class ViewController: UIViewController {
             button.backgroundColor = .white
         }
         flipCount += 1
-        flipCountLabel.text = "Flips: \(flipCount)"
      }
 }
 
