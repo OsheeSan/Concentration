@@ -8,10 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var flipCount: Int = 0
 
     @IBAction func touchedCard(_ sender: UIButton) {
         flipCard(withEmoji: "🙈", on: sender)
     }
+    
+    @IBAction func touchedSecondCard(_ sender: UIButton) {
+        flipCard(withEmoji: "❤️", on: sender)
+    }
+    
+    @IBOutlet weak var flipCountLabel: UILabel!
     
     func flipCard(withEmoji emoji: String, on button:UIButton){
         if button.currentTitle == emoji {
@@ -21,6 +29,8 @@ class ViewController: UIViewController {
             button.setTitle(emoji, for: .normal )
             button.backgroundColor = .white
         }
+        flipCount += 1
+        flipCountLabel.text = "Flips: \(flipCount)"
      }
 }
 
