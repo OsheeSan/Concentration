@@ -14,16 +14,20 @@ class ViewController: UIViewController {
             flipCountLabel.text = "Flips: \(flipCount)"
         }
     }
-
-    @IBAction func touchedCard(_ sender: UIButton) {
-        flipCard(withEmoji: "🙈", on: sender)
-    }
     
-    @IBAction func touchedSecondCard(_ sender: UIButton) {
-        flipCard(withEmoji: "❤️", on: sender)
-    }
+    @IBOutlet var cardButtons: [UIButton]!
+    //@IBOutlet var cardButtons: Array<UIButton>! - same thing
     
     @IBOutlet weak var flipCountLabel: UILabel!
+    
+    var emojiChoices = ["❤️","🏀","🏀","🍒","💩","🐸","🐸","🐝","💩","❤️","🍒","🐝",]
+
+    
+    @IBAction func touchedCard(_ sender: UIButton) {
+        flipCount += 1
+        let cardNumber = cardButtons.index(of: sender)!
+        flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
+    }
     
     func flipCard(withEmoji emoji: String, on button:UIButton){
         if button.currentTitle == emoji {
@@ -33,7 +37,6 @@ class ViewController: UIViewController {
             button.setTitle(emoji, for: .normal )
             button.backgroundColor = .white
         }
-        flipCount += 1
      }
 }
 
