@@ -21,7 +21,13 @@ class ViewController: UIViewController
     @IBOutlet var cardButtons: [UIButton]!
     //@IBOutlet var cardButtons: Array<UIButton>! - same thing
     
-    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+    lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
+    
+    var numberOfPairsOfCards: Int {
+//        get {
+            return (cardButtons.count+1)/2
+//        }
+    }
         
     @IBAction func touchedCard(_ sender: UIButton) {
         flipCount += 1
