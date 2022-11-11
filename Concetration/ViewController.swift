@@ -9,14 +9,26 @@ import UIKit
 
 class ViewController: UIViewController
 {
-
     private(set) var flipCount: Int = 0 {
         didSet{
-            flipCountLabel.text = "Flips: \(flipCount)"
+            updateFlipCountLabel()
         }
     }
     
-    @IBOutlet private weak var flipCountLabel: UILabel!
+    private func updateFlipCountLabel(){
+        let attributes: [NSAttributedString.Key : Any] = [
+            .strokeColor : UIColor.white,
+            .strokeWidth : 5.0
+        ]
+        let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
+        flipCountLabel.attributedText = attributedString
+    }
+    
+    @IBOutlet private weak var flipCountLabel: UILabel!{
+        didSet{
+            updateFlipCountLabel()
+        }
+    }
     
     @IBOutlet private var cardButtons: [UIButton]!
     //@IBOutlet var cardButtons: Array<UIButton>! - same thing
