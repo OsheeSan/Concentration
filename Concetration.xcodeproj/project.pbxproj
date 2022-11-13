@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8427806A29218D4F009E5C3B /* ConcentrationThemeChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427806929218D4F009E5C3B /* ConcentrationThemeChooser.swift */; };
 		84DF9AD12913F8120058B56E /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DF9AD02913F8120058B56E /* Concentration.swift */; };
 		84DF9AD32913F9430058B56E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DF9AD22913F9430058B56E /* Card.swift */; };
 		84E386B5290FE70900A0B8D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E386B4290FE70900A0B8D0 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8427806929218D4F009E5C3B /* ConcentrationThemeChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationThemeChooser.swift; sourceTree = "<group>"; };
 		84DF9AD02913F8120058B56E /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		84DF9AD22913F9430058B56E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		84E386B1290FE70900A0B8D0 /* Concetration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concetration.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 				84DF9AD22913F9430058B56E /* Card.swift */,
 				84E386B4290FE70900A0B8D0 /* AppDelegate.swift */,
 				84E386B6290FE70900A0B8D0 /* SceneDelegate.swift */,
+				8427806929218D4F009E5C3B /* ConcentrationThemeChooser.swift */,
 				84E386B8290FE70900A0B8D0 /* ConcentrationViewController.swift */,
 				84E386BA290FE70900A0B8D0 /* Main.storyboard */,
 				84DF9AD02913F8120058B56E /* Concentration.swift */,
@@ -148,6 +151,7 @@
 				84E386B5290FE70900A0B8D0 /* AppDelegate.swift in Sources */,
 				84DF9AD32913F9430058B56E /* Card.swift in Sources */,
 				84DF9AD12913F8120058B56E /* Concentration.swift in Sources */,
+				8427806A29218D4F009E5C3B /* ConcentrationThemeChooser.swift in Sources */,
 				84E386B7290FE70900A0B8D0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
